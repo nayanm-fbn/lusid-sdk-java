@@ -164,7 +164,7 @@ public class PortfoliosTest {
                 .source("Broker");
 
         //    Add the transaction to the portfolio
-        transactionPortfoliosApi.upsertTransactions(TutorialScope, portfolioId, new ArrayList<>(Collections.singletonList(transaction)), false);
+        transactionPortfoliosApi.upsertTransactions(TutorialScope, portfolioId, new ArrayList<>(Collections.singletonList(transaction)), null);
 
         //    Retrieve the transaction
         VersionedResourceListOfTransaction transactions = transactionPortfoliosApi.getTransactions(TutorialScope,
@@ -237,7 +237,7 @@ public class PortfoliosTest {
                 .properties(properties);
 
         //  Add the transaction
-        transactionPortfoliosApi.upsertTransactions(TutorialScope, portfolioId, new ArrayList<>(Collections.singletonList(transaction)), false);
+        transactionPortfoliosApi.upsertTransactions(TutorialScope, portfolioId, new ArrayList<>(Collections.singletonList(transaction)), null);
 
         //  get the trade
         VersionedResourceListOfTransaction transactions = transactionPortfoliosApi.getTransactions(TutorialScope,
